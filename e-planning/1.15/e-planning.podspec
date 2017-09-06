@@ -6,8 +6,10 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://e-planning.net'
   s.author       = 'Applicaster'
   s.source       = { :git => 'git@github.com:applicaster/e-planning-iOS.git', :tag => s.version.to_s }
-  s.source_files  = '**/*.{h,m}'
-  s.public_header_files = '**/Categories/*.h', '*.h'
-  s.resources = 'Resources/**/*.*'
+  s.source       = {
+      "http" => "https://dl.bintray.com/applicaster-ltd/pods/e-planning_Framework_1.15_291f0fe66130653a75609439844fd3cd292f1070.zip "
+  }
+  s.vendored_frameworks = 'e-planning.framework'
+
   s.requires_arc = true
 end
