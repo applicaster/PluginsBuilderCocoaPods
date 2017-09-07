@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
                 'SWIFT_VERSION' => '3.0'
               }
 
-  s.dependency  'ApplicasterSDK'
+  s.dependency  'ApplicasterSDK', '~> 4.6.0'
   s.dependency  'ComponentsSDK'
   s.dependency  'ComponentsStyles'
   s.dependency  'ZappLayoutsComponentsSDK'
