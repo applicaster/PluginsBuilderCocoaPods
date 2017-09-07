@@ -18,4 +18,16 @@ Pod::Spec.new do |s|
                 'SWIFT_VERSION' => '3.0'
               }
 
+  s.dependency  'ApplicasterSDK'
+  s.dependency  'ComponentsSDK'
+  s.dependency  'ComponentsStyles'
+  s.dependency  'ZappLayoutsComponentsSDK'
+  s.dependency  'ZappPlugins', '~> 1.10.0'
+  s.dependency  'ZappPushPlugins', '~> 1.4.0'
+  s.dependency  'ZappHelpers', '~> 1.1.0'
+  s.dependency  'ZappRoot', '~> 1.6.0'
+  s.dependency  'ZappAppConnector'
+  s.dependency  'MBProgressHUD', '~> 0.9.2'
+  s.dependency  'google-cast-sdk', '~> 3.5.0'
+  s.dependency  'CWStatusBarNotification', '~> 2.3.5'
 end
