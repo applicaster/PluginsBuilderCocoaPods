@@ -14,9 +14,9 @@ Pod::Spec.new do |s|
     "http" => "https://dl.bintray.com/applicaster-ltd/pods/OWASpringAppsensor_Framework_1.8.12.1_aad0ca09ea4ff1846ee6f3cca58798587af3b65c.zip"
   }
 
-  s.preserve_paths = '**/OWASpringAppsensor.framework'
-  s.vendored_framework = '**/OWASpringAppsensor.framework'
-  s.resources = '**/OWASpringAppsensor.framework/Versions/A/Resources/*'
+  s.preserve_paths = 'OWASpringAppsensor.framework'
+  s.vendored_framework = 'OWASpringAppsensor.framework'
+  s.resources = 'OWASpringAppsensor.framework/Versions/A/Resources/*'
   s.framework = 'OWASpringAppsensor'
   s.requires_arc = true
 
