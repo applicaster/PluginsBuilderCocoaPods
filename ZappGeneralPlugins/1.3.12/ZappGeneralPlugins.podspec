@@ -12,8 +12,6 @@ Pod::Spec.new do |s|
       "http" => "https://dl.bintray.com/applicaster-ltd/pods/ZappGeneralPlugins_Framework_1.3.12_efd03bfe291fb6c8f8a97d068207e8fa1512f870.zip"
   }
 
-  s.vendored_frameworks = 'ZappGeneralPlugins.framework'
-
   s.platform     = :ios, '9.0'
   s.requires_arc = true
   s.default_subspec = 'Basic'
@@ -22,6 +20,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Basic' do |basic|
     basic.dependency 'ZappPlugins'
+    basic.vendored_frameworks = 'ZappGeneralPlugins.framework'
   end
 
   #--------------SUBSPECS--------------
