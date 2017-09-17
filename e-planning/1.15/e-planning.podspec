@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source       = {
       "http" => "https://dl.bintray.com/applicaster-ltd/pods/e-planning_Framework_1.15_291f0fe66130653a75609439844fd3cd292f1070.zip"
   }
-  s.vendored_frameworks = 'e-planning.framework'
+  s.vendored_frameworks = 'e_planning.framework'
 
   s.requires_arc = true
 end
