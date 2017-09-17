@@ -12,8 +12,6 @@ Pod::Spec.new do |s|
       "http" => "https://dl.bintray.com/applicaster-ltd/pods/ZappPlayerPlugins_Framework_1.8.1_d34630c3893260ba46d503bce02c03f8ae53dd60.zip"
   }
 
-  s.vendored_frameworks = 'ZappPlayerPlugins.framework'
-
   s.platform     = :ios, '9.0'
   s.requires_arc = true
   s.default_subspec = 'Basic'
@@ -24,7 +22,7 @@ Pod::Spec.new do |s|
     basic.xcconfig =  { 'SWIFT_VERSION' => '3.0' }
     basic.dependency 'ZappPlugins'
     basic.dependency 'ZappHelpers'
-
+    basic.vendored_frameworks = 'ZappPlayerPlugins.framework'
   end
 
   #--------------SUBSPECS--------------
