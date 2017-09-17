@@ -12,8 +12,6 @@ Pod::Spec.new do |s|
     "http" => "https://dl.bintray.com/applicaster-ltd/pods/ZappAnalyticsPlugins_Framework_1.10.5_515843d70486180d7bbb6ee3a0d8acc3feac4ab6.zip"
   }
 
-	s.vendored_frameworks = 'ZappAnalyticsPlugins.framework'
-
   s.platform     = :ios, '9.0'
   s.requires_arc = true
   s.default_subspec = 'Basic'
@@ -23,6 +21,7 @@ Pod::Spec.new do |s|
     basic.xcconfig =  { 'SWIFT_VERSION' => '3.0' }
     basic.dependency 'ZappPlugins'
     basic.dependency 'ZappAppConnector'
+    basic.vendored_frameworks = 'ZappAnalyticsPlugins.framework'
   end
 
   s.subspec 'Mixpanel' do |mixpanel|
