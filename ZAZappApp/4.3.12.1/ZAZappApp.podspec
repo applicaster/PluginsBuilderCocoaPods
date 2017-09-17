@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
       "http" => "https://dl.bintray.com/applicaster-ltd/pods/ZAZappApp_Framework_4.3.12.1_ecda5a9adb0ccf35e444b4b9d1ef84962a319b13.zip"
   }
 
-	s.vendored_frameworks = 'ZAZappApp.framework'
+  s.vendored_frameworks = 'ZAZappApp.framework'
 
   s.requires_arc = true
   s.xcconfig =  {
