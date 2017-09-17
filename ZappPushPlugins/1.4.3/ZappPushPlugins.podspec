@@ -11,8 +11,6 @@ Pod::Spec.new do |s|
       "http" => "https://dl.bintray.com/applicaster-ltd/pods/ZappPushPlugins_Framework_1.4.3_18cb44bb7f8cdc0b9292872bfc6c84d4a2ade9df.zip"
   }
 
-	s.vendored_frameworks = 'ZappPushPlugins.framework'
-
   s.requires_arc = true
   s.default_subspec = 'Basic'
   s.xcconfig =  {
@@ -22,6 +20,7 @@ Pod::Spec.new do |s|
   s.subspec 'Lite' do |lite|
     lite.dependency 'ZappPlugins'
     lite.dependency 'ZappHelpers'
+    lite.vendored_frameworks = 'ZappPushPlugins.framework'
   end
 
   s.subspec 'Basic' do |basic|
