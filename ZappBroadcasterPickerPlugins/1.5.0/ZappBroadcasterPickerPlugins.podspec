@@ -12,8 +12,6 @@ Pod::Spec.new do |s|
       "http" => "https://dl.bintray.com/applicaster-ltd/pods/ZappBroadcasterPickerPlugins_Framework_1.5.0_5f1c8a44018dc34d91eedd818a4cd140bfc17ee4.zip"
   }
 
-  s.vendored_frameworks = 'ZappBroadcasterPickerPlugins.framework'
-
   s.platform     = :ios, '9.0'
   s.requires_arc = true
   s.default_subspec = 'Basic'
@@ -24,9 +22,11 @@ Pod::Spec.new do |s|
   s.dependency 'ApplicasterSDK'
 
   s.subspec 'Basic' do |basic|
-  s.xcconfig =  {
+    basic.xcconfig =  {
                 'SWIFT_VERSION' => '3.0'
               }
+    basic.vendored_frameworks = 'ZappBroadcasterPickerPlugins.framework'
+
   end
 
   #--------------SUBSPECS--------------
@@ -34,19 +34,19 @@ Pod::Spec.new do |s|
     germanCountryIP.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                   'ENABLE_BITCODE' => 'NO'
                 }
-
+    germanCountryIP.dependency 'ZappBroadcasterPickerPlugins/Basic'
   end
 
   s.subspec 'CountryIP' do |countryIP|
     countryIP.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                   'ENABLE_BITCODE' => 'NO'
                 }
-
+    countryIP.dependency 'ZappBroadcasterPickerPlugins/Basic'
   end
 
   s.subspec 'Kwese' do |kwese|
     kwese.public_header_files = 'ZappBroadcasterPickerPlugins/Plugins/BroadcasterForKwese/**/*.h'
-    kwese.source_files = 'ZappBroadcasterPickerPlugins/Plugins/BroadcasterForKwese/**/*.{h,m,swift}', 
+    kwese.source_files = 'ZappBroadcasterPickerPlugins/Plugins/BroadcasterForKwese/**/*.{h,m,swift}',
                                     'ZappBroadcasterPickerPlugins/Plugins/Common/**/*.{h,m,swift}'
 
     kwese.resources = [
@@ -59,12 +59,13 @@ Pod::Spec.new do |s|
                   'ENABLE_BITCODE' => 'NO'
                 }
 
+    kwese.dependency 'ZappBroadcasterPickerPlugins/Basic'
   end
 
   s.subspec 'Localization' do |localization|
     localization.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                   'ENABLE_BITCODE' => 'NO'
                 }
-
+    localization.dependency 'ZappBroadcasterPickerPlugins/Basic'
   end
 end
