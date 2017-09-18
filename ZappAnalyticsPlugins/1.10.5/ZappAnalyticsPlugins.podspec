@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license          = 'CMPS'
   s.author           = { "cmps" => "a.zchut@applicaster.com" }
   s.source = {
-    "http" => "https://dl.bintray.com/applicaster-ltd/pods/ZappAnalyticsPlugins_Framework_1.10.5_515843d70486180d7bbb6ee3a0d8acc3feac4ab6.zip"
+      "http" => "https://dl.bintray.com/applicaster-ltd/pods/ZappAnalyticsPlugins_Framework_1.10.5_515843d70486180d7bbb6ee3a0d8acc3feac4ab6.zip"
   }
 
   s.platform     = :ios, '9.0'
@@ -21,10 +21,11 @@ Pod::Spec.new do |s|
     basic.xcconfig =  { 'SWIFT_VERSION' => '3.0' }
     basic.dependency 'ZappPlugins'
     basic.dependency 'ZappAppConnector'
-    basic.vendored_frameworks = 'ZappAnalyticsPlugins.framework'
+    basic.vendored_frameworks = 'ZappAnalyticsPluginBase.framework'
   end
 
   s.subspec 'Mixpanel' do |mixpanel|
+    mixpanel.vendored_frameworks = 'ZappAnalyticsPluginMixpanel.framework'
     mixpanel.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                   'ENABLE_BITCODE' => 'NO'
                 }
@@ -34,6 +35,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'GoogleAnalytics' do |ga|
+    ga.vendored_frameworks = 'ZappAnalyticsPluginGA.framework'
     ga.frameworks = 'AdSupport', 'CoreData', 'SystemConfiguration'
     ga.libraries = 'sqlite3.0', 'z'
 
@@ -48,6 +50,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Flurry' do |flurry|
+    flurry.vendored_frameworks = 'ZappAnalyticsPluginFlurry.framework'
+
     flurry.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                   'ENABLE_BITCODE' => 'NO'
                 }
@@ -57,6 +61,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'ComScore' do |comscore|
+    comscore.vendored_frameworks = 'ZappAnalyticsPluginComScore.framework'
+
     comscore.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                   'ENABLE_BITCODE' => 'NO'
                 }
@@ -66,7 +72,9 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Akamai' do |akamai|
-    akamai.frameworks = 'MediaPlayer', 'SystemConfiguration'
+    akamai.vendored_frameworks = 'ZappAnalyticsPluginAkamai.framework'
+    akamai.frameworks = 'MediaPlayer', 'SystemConfiguration', 'CoreMedia'
+
     akamai.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                   'ENABLE_BITCODE' => 'NO',
                   'OTHER_LDFLAGS' => '$(inherited) -l"AKAMMediaExtensions-AV"',
@@ -78,6 +86,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Facebook' do |fb|
+    fb.vendored_frameworks = 'ZappAnalyticsPluginFacebook.framework'
+
     fb.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                   'ENABLE_BITCODE' => 'NO'
                 }
@@ -87,6 +97,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Agof' do |agof|
+    agof.vendored_frameworks = 'ZappAnalyticsPluginAgof.framework'
+
     agof.frameworks = 'CoreTelephony'
     agof.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                       'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
@@ -101,6 +113,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Liftoff' do |liftoff|
+    liftoff.vendored_frameworks = 'ZappAnalyticsPluginLiftoff.framework'
+
     liftoff.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                       'ENABLE_BITCODE' => 'NO'
                 }
@@ -110,6 +124,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'CoolaData' do |cooladata|
+     cooladata.vendored_frameworks = 'ZappAnalyticsPluginCoolaData.framework'
+
      cooladata.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                              'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
                              'OTHER_LDFLAGS' => '$(inherited) -framework "cooladata-ios-sdk"',
@@ -121,6 +137,9 @@ Pod::Spec.new do |s|
    end
 
    s.subspec 'OWA' do |owa|
+     owa.vendored_frameworks = 'ZappAnalyticsPluginOwa.framework'
+     owa.frameworks = 'AdSupport'
+
      owa.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                        'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
                        'OTHER_LDFLAGS' => '$(inherited) -framework "OWASpringAppsensor"',
@@ -131,24 +150,29 @@ Pod::Spec.new do |s|
    end
 
    s.subspec 'NetMetrix' do |netmetrix|
+     netmetrix.vendored_frameworks = 'ZappAnalyticsPluginNetMetrix.framework'
+
      netmetrix.dependency 'ZappAnalyticsPlugins/Basic'
      netmetrix.dependency 'NETMetrixTrackingClient', '~> 1.0.3'
    end
 
    s.subspec 'AppsFlyer' do |appsflyer|
-    appsflyer.frameworks = 'AdSupport'
+     appsflyer.vendored_frameworks = 'ZappAnalyticsPluginAppsFlyer.framework'
+     appsflyer.frameworks = 'AdSupport'
 
-    appsflyer.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+     appsflyer.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
       'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
       'OTHER_LDFLAGS' => '$(inherited) -framework "AppsFlyerLib"',
                             'ENABLE_BITCODE' => 'NO'
                 }
 
-    appsflyer.dependency 'ZappAnalyticsPlugins/Basic'
-    appsflyer.dependency 'AppsFlyerFramework'
+     appsflyer.dependency 'ZappAnalyticsPlugins/Basic'
+     appsflyer.dependency 'AppsFlyerFramework'
   end
 
   s.subspec 'Firebase' do |firebase|
+     firebase.vendored_frameworks = 'ZappAnalyticsPluginFirebase.framework'
+     
      firebase.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                              'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
                              'OTHER_LDFLAGS' => '$(inherited) -framework "FirebaseCore" -framework "FirebaseInstanceID" -framework "FirebaseAnalytics"',
