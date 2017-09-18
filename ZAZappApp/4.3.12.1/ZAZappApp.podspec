@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.dependency  'ZappPlugins', '~> 1.11.0'
   s.dependency  'ZappPushPlugins', '~> 1.4.0'
   s.dependency  'ZappHelpers', '~> 1.1.0'
-  s.dependency  'ZappRoot', '~> 1.6.0'
+  s.dependency  'ZappRootPlugins', '~> 1.7.0'
   s.dependency  'ZappAppConnector'
   s.dependency  'MBProgressHUD', '~> 0.9.2'
   s.dependency  'google-cast-sdk', '~> 3.5.0'
