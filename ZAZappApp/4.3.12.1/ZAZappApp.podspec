@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
 
   s.dependency  'ApplicasterSDK'
   s.dependency  'APCrossmates', '= 1.4.0'
+  s.dependency  'APFeed', '= 3.7.0'
   s.dependency  'ComponentsSDK', '= 4.5.0'
   s.dependency  'ComponentsStyles'
   s.dependency  'ZappLayoutsComponentsSDK'
