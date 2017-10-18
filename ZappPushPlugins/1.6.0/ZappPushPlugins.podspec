@@ -17,11 +17,10 @@ Pod::Spec.new do |s|
   # required for all subspecs
   s.subspec 'Lite' do |lite|
     lite.dependency 'ZappPushPlugins/UrbanAirship'
-
   end
 
   s.subspec 'Basic' do |basic|
-    basic.xcconfig =  { 'SWIFT_VERSION' => '3.0' }
+    basic.xcconfig =  { 'SWIFT_VERSION' => '3.2' }
     basic.dependency 'ZappPlugins'
     basic.dependency 'ZappHelpers'
   end
