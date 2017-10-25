@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.dependency 'APCrossmates', '~> 1.4.1'
   s.dependency 'APFeed', '~> 3.8.0'
   s.dependency 'ComponentsSDK', '~> 4.10.1'
-  s.dependency 'ComponentsStyles', '4.4.0'
+  s.dependency 'ComponentsStyles', '~> 4.4.0'
   s.dependency 'ZappLayoutsComponentsSDK'
   s.dependency 'ZappPlugins', '~> 1.13.0'
   s.dependency 'ZappPushPlugins', '~> 2.1.0'
