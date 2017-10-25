@@ -18,10 +18,10 @@ Pod::Spec.new do |s|
                 'SWIFT_VERSION' => '3.2'
               }
 
-  s.dependency 'ApplicasterSDK', '4.12.0'
-  s.dependency 'APCrossmates', '~> 1.4.1'
-  s.dependency 'APFeed', '~> 3.8.0'
-  s.dependency 'ComponentsSDK', '~> 4.10.1'
+  s.dependency 'ApplicasterSDK', '~> 0.4.12.0'
+  s.dependency 'APCrossmates', '~> 0.1.4.1'
+  s.dependency 'APFeed', '~> 0.3.8.0'
+  s.dependency 'ComponentsSDK', '~> 0.4.10.1'
   s.dependency 'ComponentsStyles', '~> 4.4.0'
   s.dependency 'ZappLayoutsComponentsSDK'
   s.dependency 'ZappPlugins', '~> 1.13.0'
