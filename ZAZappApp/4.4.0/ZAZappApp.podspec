@@ -18,12 +18,12 @@ Pod::Spec.new do |s|
                 'SWIFT_VERSION' => '3.2'
               }
 
-  s.dependency 'ApplicasterSDK', '~> 0.4.12.0'
-  s.dependency 'APCrossmates', '~> 0.1.4.1'
-  s.dependency 'APFeed', '~> 0.3.8.0'
-  s.dependency 'ComponentsSDK', '~> 0.4.10.1'
+  s.dependency 'ApplicasterSDK', '4.13.0'
+  s.dependency 'APCrossmates', '~> 1.5.0'
+  s.dependency 'APFeed', '~> 3.9.0'
+  s.dependency 'ComponentsSDK', '~> 4.11.0'
   s.dependency 'ComponentsStyles', '~> 4.4.0'
-  s.dependency 'ZappLayoutsComponentsSDK', '~> 0.1.4.0'
+  s.dependency 'ZappLayoutsComponentsSDK', '~> 1.5.0'
   s.dependency 'ZappPlugins', '~> 1.13.0'
   s.dependency 'ZappPushPlugins', '~> 2.1.0'
   s.dependency 'ZappHelpers', '~> 1.2.0'
@@ -32,4 +32,5 @@ Pod::Spec.new do |s|
   s.dependency 'MBProgressHUD', '~> 0.9.2'
   s.dependency 'google-cast-sdk', '~> 3.5.0'
   s.dependency 'CWStatusBarNotification', '~> 2.3.5'
+  s.dependency 'Firebase/RemoteConfig'
 end
