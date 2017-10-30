@@ -34,4 +34,5 @@ Pod::Spec.new do |s|
   s.dependency 'MBProgressHUD', '~> 0.9.2'
   s.dependency 'google-cast-sdk', '~> 3.5.0'
   s.dependency 'CWStatusBarNotification', '~> 2.3.5'
+  s.dependency 'GoogleToolboxForMac'
 end
