@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.dependency 'ZappLayoutsComponentsSDK', '~> 1.5.0'
   s.dependency 'ZappPlugins', '~> 1.13.0'
   s.dependency 'ZappPushPlugins', '~> 2.1.0'
-  s.dependency 'ZappHelpers', '~> 1.2.0'
+  s.dependency 'ZappHelpers', '~> 1.3.0'
   s.dependency 'ZappRootPlugins', '~> 2.1.0'
   s.dependency 'ZappAppConnector'
   s.dependency 'MBProgressHUD', '~> 0.9.2'
