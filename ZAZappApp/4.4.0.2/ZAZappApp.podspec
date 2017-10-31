@@ -15,6 +15,8 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.xcconfig =  {
+                  'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) FIREBASE_DISABLED=1',
+                  'OTHER_SWIFT_FLAGS' => '$(inherited) -DFIREBASE_DISABLED=1',
                   'SWIFT_VERSION' => '3.2'
               }
 
