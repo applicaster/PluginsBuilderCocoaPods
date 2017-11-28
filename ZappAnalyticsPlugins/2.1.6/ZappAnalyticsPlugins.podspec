@@ -107,7 +107,7 @@ Pod::Spec.new do |s|
                 }
 
     agof.dependency 'ZappAnalyticsPlugins/Basic'
-    agof.dependency 'INFOnline', '~> 1.2.0.1'
+    agof.dependency 'INFOnline', '~> 1.2.0'
 
   end
 
