@@ -36,4 +36,6 @@ Pod::Spec.new do |s|
   s.dependency 'CWStatusBarNotification', '~> 2.3.5'
   s.dependency 'Firebase', '~> 4.5.0'
   s.dependency 'Firebase/RemoteConfig'
+  s.dependency 'TwitterKit', '= 3.2.1'
+  s.dependency 'TwitterCore', '= 3.0.2'
 end
