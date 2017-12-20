@@ -15,9 +15,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.xcconfig =  {
-        'SWIFT_VERSION' => '4.0',
-        'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) CLOSED_VERSION=1',
-        'OTHER_SWIFT_FLAGS' => '$(inherited) -DCLOSED_VERSION=1'
+        'SWIFT_VERSION' => '4.0'
               }
 
   s.dependency 'ApplicasterSDK', '~> 4.19.0'
