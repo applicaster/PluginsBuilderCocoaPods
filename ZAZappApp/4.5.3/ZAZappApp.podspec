@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license = 'CMPS'
 	s.author = "Applicaster LTD."
 	s.source = {
-      "http" => "https://dl.bintray.com/applicaster-ltd/pods/ZAZappApp_Framework_4.5.3_aedfdda255638746b5709fd1e81917e49e074843.zip"
+      "http" => "https://dl.bintray.com/applicaster-ltd/pods/ZAZappApp_Framework_4.5.3_a_aedfdda255638746b5709fd1e81917e49e074843.zip"
   }
 
 	s.vendored_frameworks = 'ZAZappApp.framework'
