@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.dependency 'ComponentsSDK', '~> 4.18.0'
   s.dependency 'ComponentsStyles', '~> 4.5.0'
   s.dependency 'ZappLayoutsComponentsSDK', '~> 1.7.0'
-  s.dependency 'ZappPlugins', '~> 1.16.0'
+  s.dependency 'ZappPlugins', '~> 1.17.0'
   s.dependency 'ZappPushPlugins', '~> 2.3.0'
   s.dependency 'ZappHelpers', '~> 1.4.0'
   s.dependency 'ZappRootPlugins', '~> 2.2.0'
