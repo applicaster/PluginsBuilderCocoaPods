@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name  = "ZAZappApp"
-  s.version = '4.5.3'
+  s.version = '4.5.3.1'
   s.platform  = :ios, '9.0'
   s.summary = "ZAZappApp"
   s.description = "ZAZappApp framework."
