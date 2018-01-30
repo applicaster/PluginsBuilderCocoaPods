@@ -27,6 +27,7 @@ Pod::Spec.new do |s|
   s.subspec 'Mixpanel' do |mixpanel|
     mixpanel.vendored_frameworks = 'ZappAnalyticsPluginMixpanel.framework'
     mixpanel.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+                  'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
                   'ENABLE_BITCODE' => 'NO'
                 }
 
@@ -40,6 +41,7 @@ Pod::Spec.new do |s|
     ga.libraries = 'sqlite3.0', 'z'
 
     ga.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+                      'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
                       'OTHER_LDFLAGS' => '$(inherited) -l"GoogleAnalytics"',
                       'LIBRARY_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
                       'ENABLE_BITCODE' => 'NO'
@@ -53,6 +55,7 @@ Pod::Spec.new do |s|
     flurry.vendored_frameworks = 'ZappAnalyticsPluginFlurry.framework'
 
     flurry.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+                  'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
                   'ENABLE_BITCODE' => 'NO'
                 }
 
@@ -64,6 +67,7 @@ Pod::Spec.new do |s|
     comscore.vendored_frameworks = 'ZappAnalyticsPluginComScore.framework'
 
     comscore.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+                  'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
                   'ENABLE_BITCODE' => 'NO'
                 }
 
@@ -76,6 +80,7 @@ Pod::Spec.new do |s|
     akamai.frameworks = 'MediaPlayer', 'SystemConfiguration', 'CoreMedia'
 
     akamai.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+                  'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
                   'ENABLE_BITCODE' => 'NO',
                   'OTHER_LDFLAGS' => '$(inherited) -l"AKAMMediaExtensions-AV"',
                   'LIBRARY_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**'
@@ -89,6 +94,7 @@ Pod::Spec.new do |s|
     fb.vendored_frameworks = 'ZappAnalyticsPluginFacebook.framework'
 
     fb.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+                  'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
                   'ENABLE_BITCODE' => 'NO'
                 }
 
@@ -115,6 +121,7 @@ Pod::Spec.new do |s|
     liftoff.vendored_frameworks = 'ZappAnalyticsPluginLiftoff.framework'
 
     liftoff.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+                      'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
                       'ENABLE_BITCODE' => 'NO'
                 }
 
@@ -151,6 +158,11 @@ Pod::Spec.new do |s|
 
    s.subspec 'NetMetrix' do |netmetrix|
      netmetrix.vendored_frameworks = 'ZappAnalyticsPluginNetMetrix.framework'
+
+     netmetrix.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+                       'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
+                       'ENABLE_BITCODE' => 'NO'
+                 }
 
      netmetrix.dependency 'ZappAnalyticsPlugins/Basic'
      netmetrix.dependency 'NETMetrixTrackingClient', '~> 1.1.0'
