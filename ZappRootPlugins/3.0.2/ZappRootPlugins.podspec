@@ -32,4 +32,16 @@ Pod::Spec.new do |s|
 		nativeTabBar.dependency 'ZappLayoutsComponentsSDK'
 		nativeTabBar.dependency 'ZappRootPlugins/Basic'
  	end
+	
+	s.subspec 'TwoLevelRNMenu' do |twoLevelRNMenu|
+	 twoLevelRNMenu.source_files  = 'ZappRootPlugin2LevelRNMenu/**/*.{swift,h,m}'
+	 twoLevelRNMenu.dependency 'ComponentsSDK'
+	 twoLevelRNMenu.dependency 'ZappReactNativeAdapter/Default'
+	 twoLevelRNMenu.dependency 'yoga'
+	 twoLevelRNMenu.dependency 'React'
+	 twoLevelRNMenu.dependency 'DoubleConversion'
+	 twoLevelRNMenu.dependency 'GLog'
+	 twoLevelRNMenu.dependency 'Folly'
+	 twoLevelRNMenu.dependency 'ZappRootPlugins/Basic'
+	end
 end
