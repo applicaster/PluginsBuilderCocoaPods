@@ -25,5 +25,5 @@ Pod::Spec.new do |s|
               }
 
   # addtional dependencies
-  s.dependency 'Mixpanel-swift', '~> 2.4.0'
+  s.dependency 'Mixpanel-swift', '~> 2.5.3'
 end
