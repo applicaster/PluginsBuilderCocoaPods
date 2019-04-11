@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
   s.name  = "ZappAnalyticsPluginFirebase"
   s.version = '6.1.3'
-  s.platform  = :ios, '9.0'
+  s.platform  = :ios, '10.0'
   s.summary = "ZappAnalyticsPluginFirebase"
   s.description = "ZappAnalyticsPluginFirebase container."
   s.homepage  = "https://github.com/applicaster/ZappAnalyticsPluginFirebase-iOS"
   s.license = 'CMPS'
 	s.author = "Applicaster LTD."
 	s.source = {
-      "http" => "https://dl.bintray.com/applicaster-ltd/pods/ZappAnalyticsPluginFirebase_Framework_6.1.3_1231e7126e585c154fd1a4f82e429a17ade4498c.zip"
+      "http" => "https://dl.bintray.com/applicaster-ltd/pods/ZappAnalyticsPluginFirebase_Framework_6.1.3_5afe3b9c55f10f954735c6b98059b982b7c53b37.zip"
   }
 
   s.requires_arc = true
