@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license = 'CMPS'
 	s.author = "Applicaster LTD."
 	s.source = {
-      "http" => "https://dl.bintray.com/applicaster-ltd/pods/AdobeAnalytics_Framework_0.0.7_c464d028c3cfc891ec974cfbee5557818951a4a2.zip"
+      "http" => "https://dl.bintray.com/applicaster-ltd/pods/AdobeAnalytics_Framework_0.0.7_aa6d953e8248992188ebe591cccd486c885d5ab1.zip"
   }
 
   s.requires_arc = true
