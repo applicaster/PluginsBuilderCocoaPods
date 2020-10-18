@@ -18,14 +18,11 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'EasyTrackingAnalytics.framework'
   s.exclude_files = 'EasyTrackingAnalytics/EasyTrackingAnalytics.h'
   
-  s.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+  s.xcconfig =  {
+                  'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                   'ENABLE_BITCODE' => 'YES',
-                  'SWIFT_VERSION' => '5.1',
-                  'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/**"',
-                  'LIBRARY_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/GoogleIDFASupport/Libraries" "${PODS_ROOT}/GoogleAnalytics/Libraries"',
-                  'OTHER_LDFLAGS' => '$(inherited) -ObjC -l"GoogleAnalytics" -l"AdIdAccessLibrary" -framework "CoreLocation"',
-                  'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/GoogleAnalyticsWrapper/Cocoapods/'
-                }
+                  'SWIFT_VERSION' => '5.1'
+  }
 
   s.dependency 'ZappPlugins'
   s.dependency 'EasyTracking/EchoTracker'
