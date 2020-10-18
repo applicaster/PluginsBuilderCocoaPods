@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
         s.source = {
       "http" => "https://dl.bintray.com/applicaster-ltd/pods/EasyTrackingAnalytics_Framework_0.5.3_321e9bb2d19cfb9e1e4b96d52cd90d377ba4c4dc.zip"
   }
-
+  
+  s.swift_version = "5.2"
   s.requires_arc = true
   s.static_framework = true
   
@@ -19,13 +20,13 @@ Pod::Spec.new do |s|
   
   s.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                   'ENABLE_BITCODE' => 'YES',
-                  'SWIFT_VERSION' => '5.1',
+                  'SWIFT_VERSION' => '5.2',
                   'OTHER_LDFLAGS' => '$(inherited) -l"GoogleAnalytics" -l"GoogleIDFASupport"'
-              }
+                }
 
   s.dependency 'ZappPlugins'
   s.dependency 'EasyTracking/EchoTracker'
-  # s.dependency 'EasyTracking/GoogleAnalytics'
+  s.dependency 'GoogleAnalytics'
   s.dependency 'EasyTracking/INFOnline'
   # s.dependency 'EasyTracking/Nielsen'
   s.dependency 'EasyTracking/Mixpanel'
