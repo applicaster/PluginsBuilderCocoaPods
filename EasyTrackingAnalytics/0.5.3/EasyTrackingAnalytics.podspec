@@ -5,24 +5,21 @@ Pod::Spec.new do |s|
   s.summary = "EasyTrackingAnalytics"
   s.description = "EasyTrackingAnalytics container."
   s.homepage  = "https://github.com/applicaster-plugins/EasyTrackingAnalytics-iOS"
-  s.license = 'MIT'
-  s.author = "Applicaster LTD."
-  s.source = {
-      "http" => "https://dl.bintray.com/applicaster-ltd/pods/EasyTrackingAnalytics_Framework_0.5.3_321e9bb2d19cfb9e1e4b96d52cd90d377ba4c4dc.zip"
+  s.license = 'CMPS'
+	s.author = "Applicaster LTD."
+	s.source = {
+      "http" => "https://dl.bintray.com/applicaster-ltd/pods/EasyTrackingAnalytics_Framework_0.5.3_3aff251054cb56f5924ec646f3e2797037273855.zip"
   }
 
-  s.swift_version = "5.1"
   s.requires_arc = true
   s.static_framework = true
-  
   s.vendored_frameworks = 'EasyTrackingAnalytics.framework'
   s.exclude_files = 'EasyTrackingAnalytics/EasyTrackingAnalytics.h'
   
-  s.xcconfig =  {
-                  'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+  s.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                   'ENABLE_BITCODE' => 'YES',
                   'SWIFT_VERSION' => '5.1'
-  }
+              }
 
   s.dependency 'ZappPlugins'
   s.dependency 'EasyTracking/EchoTracker'
